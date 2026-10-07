@@ -2,8 +2,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  // Remove trailing slash and /api if it's already in your routes
-  baseURL: 'https://api.word.valtherainvestments.com/api/words', // No trailing slash
+  baseURL: import.meta.env.VITE_API_BASE_URL,
   timeout: 30000,
   headers: {
     'Content-Type': 'application/json',
